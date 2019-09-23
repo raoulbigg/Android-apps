@@ -1,0 +1,35 @@
+<ion-view  cache-view="false" id="store-visit-wrapper" hide-tabs>
+<style>
+.bar.bar-assertive {
+    border-color:none;
+    background-color: #D64541;
+    box-shadow: none;
+}
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <ion-content class="padding">
+  
+      <div style="margin-bottom:10px;" ng-show="givelys" ng-repeat="list in givelys track by $index">
+        <div class="list list-card card ink" style="margin-left: -16px;width: 100vw;margin-top:-17px;margin-bottom:10px;">
+          <a href="#/tab/home-public/{{list.code}}">
+            <div class="item ink item-text-wrap" ng-style="{{background($index)}}" data-ink-color="#D2D7D3" data-ink-opacity=".2">
+              <!-- <img ng-if="list.item0Image" style="position:absolute;" class="public-thumb" ng-src="{{list.item0Image}}"></img>-->
+              <div ng-if="list.item0Image" class="circle animated jello" style="z-index:9999;background-image: url('{{list.item0Image}}')"></div>
+              <img ng-if="!list.item0Image" class="circle animated jello" style="position:absolute;z-index:9999;background-image: url('img/icon.png');"></img>
+              <h5 class="card-title" ng-bind-html="list.title_name"></h5>
+              <h5 style="position:relative;top:15%;color:#ecf0f1;font-size:15px;">
+              <p class="animated slideInRight card-gift">{{list.index + 1}} gifts</p>
+              <p class="glass card-item"> {{list.item0Name}} </p></h5>
+            </div>
+          </a>
+        </div>
+      </div> 
+    <ion-infinite-scroll 
+      ng-if="!end"
+      spinner="lines"
+      immediate-check="false"
+      on-infinite="loadMore(givelys.length)"
+      distance="1%">
+    </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

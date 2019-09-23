@@ -1,0 +1,49 @@
+<ion-view  cache-view="false" id="store-visit-wrapper" hide-tabs>
+<link href="css/style.css" rel="stylesheet">
+
+<style>
+.bar.bar-assertive {
+    border-color:none;
+    background-color: #D64541;
+    box-shadow: none;
+}
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <ion-content class="padding">
+    <a ng-show="givelys==null" class="list custom-card card" style="margin-left: -16px;width: 100vw;margin-top:-17px;margin-bottom:-2px;margin-bottom:-2px;" href="#/tab/home-create">
+      <div class="item ink item-text-wrap"  data-ink-color="#D2D7D3"">
+        <i class="ion-plus-round icon-card animated bounceIn"></i>
+        <h5 style="position:relative;top:25%;color:white;font-size:25px;">Create</h5>
+        <h5 style="position:relative;top:25%;color:white;font-size:15px;">You don't have any Gively's yet 😞</h5>
+      </div>
+    </a>
+
+    <div ng-show="givelys" ng-repeat="list in givelys track by $index">
+
+      <div class="list list-card card" style="margin-left: -16px;width: 100vw;margin-top:-17px;margin-bottom:10px;">
+      <a ng-if="list.code.indexOf('g') == 0" href="#/tab/home-listg/{{list.code}}/{{$index}}">
+        <div class="item ink item-text-wrap" ng-style="{{background($index)}}"  data-ink-color="#D2D7D3" >
+          <h5 class="card-title">{{list.title_name}}</h5>
+          <h5 style="position:relative;top:25%;right:0px;color:white;font-size:15px;">
+          </h5>
+        </div>
+      </a>
+
+
+      <a ng-if="list.code.indexOf('g') != 0" href="#/tab/home-list/{{$index}}">
+        <div class="item ink item-text-wrap" ng-style="{{background($index)}}"  data-ink-color="#D2D7D3" >
+          <h5 class="card-title">{{list.title_name}}</h5>
+            <h5 style="position:relative;top:25%;right:0px;color:white;font-size:15px;">
+              <p ng-if="list.code.indexOf('g') != 0" class="card-gift">{{list.index + 1}} gifts</p>
+            </h5>
+        </div>
+      </a>
+          <!--<button ng-click="copy(list.shareURL)" ion-ripple ion-ripple-color="#bdc3c7" class="button button-fab button-share button-outline button-small button-balanced ion-link animated bounceIn"></button>-->
+          <button ng-click="share(list.shareURL)" ion-ripple ion-ripple-color="#bdc3c7" class="button button-fab button-share button-outline button-small button-balanced ion-android-share-alt animated bounceIn"></button> 
+          <button ng-click="open(list.shareURL)" ion-ripple ion-ripple-color="#bdc3c7" class="button button-fab button-open button-outline button-small button-balanced ion-android-globe animated bounceIn"></button> 
+      </div>      
+    </ion-content>
+</ion-view>
+
+
+

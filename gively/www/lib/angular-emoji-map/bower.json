@@ -1,0 +1,25 @@
+{
+  "name": "angular-emoji-map",
+  "version": "1.0.1",
+  "main": "angular-emoji-map.js",
+  "devDependencies": {
+    "angular": "latest"
+  },
+  "homepage": "https://github.com/mmattax/angular-emoji-map",
+  "authors": [
+    "Michael Mattax <michael@xattam.com>"
+  ],
+  "description": "Convert emoji shortcodes to unicode",
+  "keywords": [
+    "emoji",
+    "unicode"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

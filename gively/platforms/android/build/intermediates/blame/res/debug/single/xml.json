@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/res/merged/debug/xml/sharing_paths.xml",
+        "source": "/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/res/xml/sharing_paths.xml"
+    },
+    {
+        "merged": "/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/res/xml/provider_paths.xml"
+    },
+    {
+        "merged": "/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/res/merged/debug/xml/config.xml",
+        "source": "/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/res/xml/config.xml"
+    }
+]

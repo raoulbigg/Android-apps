@@ -1,0 +1,89 @@
+  <ion-view hide-tabs>
+    <ion-content class="padding has-footer">
+      <div ng-show="title1==false">
+        <h3 ng-click="title1=true" style="margin-top:20px;margin-bottom:40px;text-align:center;color:grey;font-size:20px;">{{items.title_name}} <i ng-click="title1=true" class="fa fa-pencil-square-o edit animated bounceIn"></i></h3>
+      </div>
+      <div class="list card card-dash stable-bg card-edit-title" ng-show="title1==true" style="margin:0 auto;margin-top:10px;margin-bottom:20px;">
+        <div ion-ripple ion-ripple-color="#bdc3c7" class="item">
+        <label class="item item-input item-floating-label">
+          <input type="text" class="input-edit-title" ng-model="items.title_name" placeholder="My wishlist">
+        </label>
+        <button ion-ripple ion-ripple-color="#bdc3c7" ng-click="title1=false" style="position:absolute;width:40px;height:40px;right:10px;top:7px;" ng-show="items.title_name" class="button button-fab button-outline button-small button-balanced ion-checkmark-round animated bounceIn"></button> 
+        </div>
+      </div>
+      <!-- WHEN CHANING INDEX -->
+      <ion-list  ng-show="reOrder==true" show-reorder="true">
+      <div style="margin-top:-20px;">
+        <ion-item class="animated BounceIn card card-dash" ng-repeat="item in items.index | range track by $index" style="width:94vw;border-left:6px solid;left:-8px;" ng-style="{{colors($index)}}">
+              <div ng-if="items['item'+$index+'Image']" on-hold="openModal($index)">
+                <img ng-click="Picture($index)" class="circle animated fadeIn ink" style="position:relative;bottom:20px;width:40px;height:40px;float:left;left:-10px;margin-bottom:-20px;z-index:9999;background-image: url('{{items['item'+$index+'Image']}}')" on-hold="openModal($index)"/>
+              </div>               
+          <ion-reorder-button ng-show="reOrder==true"
+                              class="ion-navicon"
+                              style="right:0;width:10px;font-size:10px;"
+                              on-reorder="moveItem(item, $fromIndex, $toIndex)">
+          </ion-reorder-button>
+            <p ng-if="items['item'+$index+'Name']"><p ng-if="items['item'+$index+'Name']">{{items['item'+$index+'Name']}}</p> <p ng-if="items['item'+$index+'Name']==undefined">Great pair of socks</p></p> 
+            <p style="font-size:15px;color:#87D37C;" ng-click="items[$index]=true">{{items['item'+$index+'Link']}}</p> 
+          </div>         
+        </ion-item>
+      </ion-list>
+      <!-- END CHANGING INDEX -->
+
+      <div id="items" ng-repeat="item in index | range track by $index"  ng-controller="uploadPic">
+        <div id="card{{$index}}" class="list card card-dash stable-bg" style="margin-bottom:-18px;width:105%;left:-8px;"> 
+          <div style="border-left:6px solid;" ng-style="{{colors($index)}}" class="item" ion-ripple ion-ripple-color="#bdc3c7" data-ink-opacity=".2">
+          <div ng-show="!items[$index]">
+            <div ng-click="items[$index]=true"> 
+            <div ng-if="items['item'+$index+'Image']">
+              <img class="circle animated fadeIn ink" style="position:relative;bottom:15px;width:50px;height:50px;float:left;left:-10px;margin-bottom:-20px;z-index:9999;background-image: url('{{items['item'+$index+'Image']}}')" on-hold="openModal($index)"/>
+            </div>                
+              <p ng-if="items['item'+$index+'Name']">
+                <b style="font-size:15px;color:#87D37C;">{{items['name'+$index]}}</b> <p style="color:grey;">is giving {{items.friend}}:</p>
+                <p style="margin-top:10px;" ng-if="items['item'+$index+'Name']">{{items['item'+$index+'Name']}}</p> 
+                <p style="margin-top:10px;" ng-if="items['item'+$index+'Name']==undefined">Great pair of socks</p>
+              </p> 
+            </div> 
+              <p style="font-size:15px;color:#87D37C;" ng-click="items[$index]=true">{{items['item'+$index+'Link']}}</p> 
+          </div> 
+          <div ng-show="items[$index]==true"> 
+            <i ng-if="$index > 0" class="ion-trash-b trash ink" aria-hidden="true" ng-click="remove($index)"></i>
+            <label class="item-input"> 
+              <input type="text" style="margin-left:-5px;" ng-model="items['item'+$index+'Name']" placeholder="Great pair of socks" ion-ripple ion-ripple-color="#bdc3c7" data-ink-opacity=".1"> 
+            </label> 
+            <p style="z-index:9;margin-left:10px;margin-bottom:-5px;margin-left:10px;position:relative;top:10px;color:#87D37C;">Where to get it?</p> 
+              <input style="margin-bottom:10px;margin-top:12px;margin-left:10px;" type="text" ng-model="items['item'+$index+'Link']" placeholder="amazon.com/pair-of-socks" ion-ripple ion-ripple-color="#2ecc71"> 
+            </label> 
+            <button  ng-click="items[$index]=True" style="z-index:9;float:right;bottom:15px;position:absolute;width:40px;height:40px;right:20px;" ng-show="items['item'+$index+'Name']" class="button button-fab button-outline button-small button-balanced ion-checkmark-round"></button> 
+            <div ng-if="items['item'+$index+'Image']" on-hold="openModal($index)">
+              <img ng-click="Picture($index)" class="circle animated fadeIn ink" style="position:relative;bottom:15px;float:left;left:10px;margin-bottom:-20px;z-index:9999;background-image: url('{{items['item'+$index+'Image']}}')" on-hold="openModal($index)"/>
+            </div>
+            <button ion-ripple ion-ripple-color="#bdc3c7" ng-show="!items['item'+$index+'Image']" ng-click="Picture($index)" style="position:relative;width:40px;height:40px;left:10px;bottom:0px;" class="ion-image button button-fab button-outline button-small button-balanced"></i>
+          </div> 
+        </div>
+      </div>
+      </div> 
+          <div id="items1">
+          </div>
+          <script id="my-modal.html" type="text/ng-template">
+            <ion-modal-view style="text-align: center;float:center:margin:0 auto;background: transparent;">
+              <ion-content ng-click="closeModal($index)">
+              <img style=" margin: 0;position: absolute;top: 50%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%);border-radius:7px;width:70%" ng-src="{{items['item'+indexM+'Image']}}"/>
+              </ion-content>
+            </ion-modal-view>
+          </script>
+    </div>
+    <br><br><br>
+
+
+
+
+
+
+
+    </ion-content>
+    <ion-footer-bar style="border:none;background-color: transparent; " ng-if="title1==false" class="light tabs hide-on-keyboard-open" disabled>
+      <a  ng-click="confirm()" style="text-align:center;width:50vw;background-color:#87D37C;" class="ink ion-checkmark-round"></a>
+      <a  ng-click="delete()" style="text-align:center;width:50vw;background-color:#e74c3c;" class="ink ion-trash-b"></a>
+    </ion-footer-bar> 
+  </ion-view>

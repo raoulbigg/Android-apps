@@ -1,0 +1,28 @@
+<ion-view  cache-view="false" id="store-visit-wrapper" hide-tabs>
+<style>
+.bar.bar-assertive {
+    border-color:none;
+    background-color: #D64541;
+    box-shadow: none;
+}
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <ion-content class="padding">
+        <div class="list half" ng-repeat="list in givelys track by $index">
+            <div style="display: block" class="card card-gallery item item-text-wrap" ng-if="list.item0Image">
+                <div class="ink dark-bg">
+                    <h2>{{list.item0Name}}</h2>
+                    <img class="full-image" ng-src="{{list.item0Image}}">
+                </div>
+            </div>
+        </div>
+    <ion-infinite-scroll 
+      ng-if="!end"
+      spinner="lines"
+      immediate-check="false"
+      on-infinite="loadMore(givelys.length)"
+      distance="1%">
+    </ion-infinite-scroll>
+    </ion-content>
+</ion-view>
+r

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/exploded-aar/org.apache.cordova/CordovaLib/6.2.3/release/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4afe44cc8afd1ef96d07aa88609c95c032e1792a">
+        <dex dex="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/pre-dexed/release/CordovaLib-6.2.3-release_5765657cc9893f7d92857b3ab42611e0c0336522.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/exploded-aar/org.apache.cordova/CordovaLib/6.2.3/debug/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="379f00bda61320bd243658bec09ac41700d04593">
+        <dex dex="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-6.2.3-debug_2d4f0ac549fdb3c7d01289b64fcd6cc0b504f549.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-24.1.1_7c7289ce422f52a4469c90f0b3f50de3940854f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rb/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/24.1.1/support-annotations-24.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3af19f153122737b372622fa6c81dd11a1c6b999">
+        <dex dex="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-24.1.1_3200497f5864a4b7ab29a96d158745b6e802b28a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.1.1_0e34b00cbe44320430046a7ad22903c21b4a1097.jar" />
+    </item>
+
+</items>

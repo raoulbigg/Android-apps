@@ -1,0 +1,19 @@
+<ion-view hide-tabs cache-view="false">
+  <ion-content class="has-header">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <div class="padding">
+    <h3 style="margin-top:20px;margin-bottom:40px;text-align:center;color:grey;font-size:20px;">{{gively.title_name}}</h3>
+    <div ng-repeat="item in gively.index + 1 | range track by $index">
+      <div ng-if="gively['item'+$index+'Name']" class="list card card-dash stable-bg animated fadeIn" style="width:105%;left:-9px;margin:2px auto;border-radius:5px;">
+          <div class="item item-avatar"  style="border-left:6px solid;" ng-style="{{colors($index)}}">
+              <div ng-if="gively['item'+$index+'Image']" class="circle animated fadeIn" style="z-index:9999;background-image: url('{{gively['item'+$index+'Image']}}')"></div>
+              <div ng-if="!gively['item'+$index+'Image']" class="circle animated fadeIn" style="z-index:9999;background-image: url('img/icon.png')"></div>
+              <p>{{gively['item'+$index+'Name']}}</p>
+              <a ng-click="goTo(gively['item'+$index+'Link'])" style="color:#2ecc71">
+                  <i ng-if="gively['item'+$index+'Link']" class="fa fa-link link" aria-hidden="true"> {{gively['item'+$index+'Link']}}</i>
+              </a>
+          </div>
+      </div>
+      </div>
+</ion-content>
+</ion-view>

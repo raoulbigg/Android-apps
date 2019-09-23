@@ -1,0 +1,65 @@
+<ion-view  hide-nav-bar="true" cache-view="false" id="store-visit-wrapper" hide-tabs>
+  <div ng-if="splash" id="custom-overlay">
+    <style>
+      .pane {
+        background-color: #ef473a;
+      }
+     </style>
+      <button class="circle-splash circle animated bounceIn">
+        <img class="animated bounceIn" style="width:100px;" src="img/icon.png">
+      </button> 
+    
+  </div> 
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style>
+  .card-home .item {
+    height: {{screenHeight}};
+  }
+</style>
+  <ion-content class="padding">
+    <a class="list custom-card card card-home" style="margin-left: -16px;width: 100vw;margin-top:-17px;margin-bottom:-2px;margin-bottom:-2px;" href="#/tab/home-create">
+      <div class="item ink item-text-wrap" data-ink-color="#D2D7D3" data-ink-opacity=".2">
+        <i class="ion-plus-round icon-card animated bounceIn"  style="top:30px;"></i>
+        <h5 class="animated fadeIn" style="position:relative;top:25px;color:white;font-size:25px;">Create</h5>
+        <h5 class="animated fadeIn" style="position:relative;top:25px;color:white;font-size:15px;">Create Wishlist</h5>
+      </div>
+    </a>
+    <a  class="list saved-card card card-home" style="margin-left: -16px;width: 100vw;margin-top:1.5px;margin-bottom:-2px;margin-bottom:-2px;" href="#/tab/home-list">
+      <div class="item ink item-text-wrap"  data-ink-color="#D2D7D3" data-ink-opacity=".2">
+      <i class="fa fa-heart fa-3x icon-card animated bounceIn" style="top:35px;"></i>
+        <h5 class="animated fadeIn" style="position:relative;top:25px;color:white;font-size:25px;">Saved</h5>
+        <h5 class="animated fadeIn" style="position:relative;top:25px;color:white;font-size:15px;">Saved Wishlists</h5>
+      </div>
+    </a>
+    <a class="list open-card card card-home" style="margin-left: -16px;width: 100vw;margin-top:1.5px;margin-bottom:-2px;margin-bottom:-2px;" href="#/tab/home-public">
+      <div class="item ink item-text-wrap"  data-ink-color="#D2D7D3" data-ink-opacity=".2">
+        <!--<i class="ion-android-globe icon-card animated bounceIn" style="top:30px;"></i>-->
+        <img src="img/icon.png" style="position:absolute;width:50px;border:none;box-shadow:none;top:25px;left:25px;"/>
+        <h5 class="animated fadeIn" style="position:relative;top:25px;color:white;font-size:25px;">Discover</h5>
+        <h5 class="animated fadeIn" style="position:relative;top:25px;color:white;font-size:15px;">The world of wishlists</h5>
+      </div>
+    </a>
+   <!-- <div class="list donate-card card" style="margin-left: -16px;width: 100vw;margin-top:1.5px;margin-bottom:-2px;margin-bottom:-2px;">
+      <div class="item ink item-text-wrap"  data-ink-color="#D2D7D3"">
+        <i class="fa fa-birthday-cake fa-3x icon-card animated bounceIn" style="top:30px;"></i>
+        <h5 class="animated fadeIn" style="position:relative;top:25%;color:white;font-size:25px;">Others</h5>
+        <h5 class="animated fadeIn" style="position:relative;top:25%;color:white;font-size:15px;">Open your friends Gively's</h5>     
+      </div>
+    </div>-->
+    <div ng-click="rateUs()" class="list donate-card card card-home" style="margin-left: -16px;width: 100vw;margin-top:1.5px;margin-bottom:-2px;margin-bottom:-2px;">
+      <div class="item ink item-text-wrap"  data-ink-color="#D2D7D3" data-ink-opacity=".2">
+       <i class="ion-android-star icon-card animated bounceIn" style="top:30px;"></i>
+        <h5 class="animated fadeIn" style="position:relative;top:20px;color:white;font-size:25px;">Gively</h5>
+        <h5 class="animated fadeIn" style="position:relative;top:20px;color:white;font-size:15px;">Rate us<br> ⭐⭐⭐⭐⭐</h5>
+     </div>
+    </div>
+    <div ng-click="donate()" class="list rate-card card card-home" style="margin-left: -16px;width: 100vw;margin-top:1.5px;margin-bottom:-2px;margin-bottom:-2px;">
+      <div class="item ink item-text-wrap"  data-ink-color="#D2D7D3" data-ink-opacity=".2">
+       <i class="ion-cash icon-card animated bounceIn" style="top:30px;"></i>
+        <h5 class="animated fadeIn" style="position:relative;top:25px;color:white;font-size:25px;">Donate</h5>
+        <h5 class="animated fadeIn" style="position:relative;top:25px;color:white;font-size:15px;">Donate to keep Giftly alive</h5>
+     </div>
+    </div>
+    </ion-content>
+</ion-view>

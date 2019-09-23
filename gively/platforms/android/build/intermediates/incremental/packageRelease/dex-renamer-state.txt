@@ -1,0 +1,4 @@
+#Wed Jun 28 19:16:46 CEST 2017
+base.0=/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/transforms/dex/release/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/home/rb/Desktop/Scripts_made/apps/gively/platforms/android/build/intermediates/transforms/dex/release/folders/1000/1f/main/classes.dex

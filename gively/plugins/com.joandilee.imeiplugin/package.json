@@ -1,0 +1,86 @@
+{
+  "_args": [
+    [
+      "imeiplugin",
+      "/home/rb/Desktop/Scripts_made/apps/gively"
+    ]
+  ],
+  "_from": "imeiplugin@latest",
+  "_id": "imeiplugin@1.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/imeiplugin",
+  "_nodeVersion": "0.10.29",
+  "_npmUser": {
+    "email": "joandi85@yahoo.com",
+    "name": "zho"
+  },
+  "_npmVersion": "2.13.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "imeiplugin",
+    "raw": "imeiplugin",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/imeiplugin/-/imeiplugin-1.0.1.tgz",
+  "_shasum": "2c8dd84720bbe6def684c08f17732ab1ae338432",
+  "_shrinkwrap": null,
+  "_spec": "imeiplugin",
+  "_where": "/home/rb/Desktop/Scripts_made/apps/gively",
+  "author": {
+    "name": "Joandi"
+  },
+  "bugs": {
+    "url": "https://github.com/zho/phonegap-imeiplugin/issues"
+  },
+  "cordova": {
+    "id": "com.joandilee.imeiplugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Get The Real IMEI Number on Device",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "2c8dd84720bbe6def684c08f17732ab1ae338432",
+    "tarball": "https://registry.npmjs.org/imeiplugin/-/imeiplugin-1.0.1.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.5.0"
+    }
+  ],
+  "gitHead": "3a73c10d67368c379cc71b725d67963f776a2afa",
+  "homepage": "https://github.com/zho/phonegap-imeiplugin#readme",
+  "keywords": [
+    "cordova",
+    "cordova-android",
+    "ecosystem:cordova",
+    "imei"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "zho",
+      "email": "joandi85@yahoo.com"
+    }
+  ],
+  "name": "imeiplugin",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zho/phonegap-imeiplugin.git"
+  },
+  "scripts": {},
+  "version": "1.0.1"
+}

@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      "cordova-plugin-clipboard-x",
+      "/home/rb/Desktop/Scripts_made/apps/giftly"
+    ]
+  ],
+  "_from": "cordova-plugin-clipboard-x@latest",
+  "_id": "cordova-plugin-clipboard-x@1.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/cordova-plugin-clipboard-x",
+  "_nodeVersion": "0.12.10",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-clipboard-x-1.0.1.tgz_1478001536816_0.022917423164471984"
+  },
+  "_npmUser": {
+    "email": "niconaso@gmail.com",
+    "name": "niconaso"
+  },
+  "_npmVersion": "2.14.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "cordova-plugin-clipboard-x",
+    "raw": "cordova-plugin-clipboard-x",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-clipboard-x/-/cordova-plugin-clipboard-x-1.0.1.tgz",
+  "_shasum": "5894d089b7d57c427bc4aeed6196799a55eeec5e",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-clipboard-x",
+  "_where": "/home/rb/Desktop/Scripts_made/apps/giftly",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://github.com/niconaso/cordova-plugin-clipboard-x/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-clipboard-x",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova Clipboard Plugin",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "5894d089b7d57c427bc4aeed6196799a55eeec5e",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-clipboard-x/-/cordova-plugin-clipboard-x-1.0.1.tgz"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "gitHead": "50ccd06341dd26de2e1efdbb01dee45830a82b7a",
+  "homepage": "https://github.com/niconaso/cordova-plugin-clipboard-x#readme",
+  "keywords": [
+    "clipboard",
+    "copy",
+    "cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8",
+    "ecosystem:cordova",
+    "paste"
+  ],
+  "license": "Apache-2.0",
+  "maintainers": [
+    {
+      "name": "niconaso",
+      "email": "niconaso@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-clipboard-x",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niconaso/cordova-plugin-clipboard-x.git"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "version": "1.0.1"
+}
