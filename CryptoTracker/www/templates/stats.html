@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+
+  <body ng-app="starter">
+
+    <ion-content ng-controller="STATS"><br><br>
+    <div ng-if="price">
+      <div class="card">
+        <div  class="item item-text-wrap">
+        <figure>
+          <img src="img/{{id}}.png" class="crypto-image">
+            <figcaption class="fig-crypto item-note"> {{id}}</figcaption>
+        </figure>
+        <p><b>{{sign}}{{price}}</b></p>
+        <p ng-if="day.indexOf('-') >= 0" style="color:red"><i class="ion-arrow-down-b" style="color:red"></i>{{day}}</p>
+        <p ng-if="day.indexOf('-') < 0 " style="color:green"><i class="ion-arrow-up-b" style="color:green"></i>{{day}}</p>  
+        <div class="item-note"><img data-ng-src="data:image/jpeg;base64,{{hour}}" style="box-shadow:none;max-width:30%;position:absolute;top:45%;left:70%;"/></div>
+
+        </div>
+      </div>
+      <div class="card">
+        <div  class="item item-text-wrap">
+        <figcaption class="fig-crypto item-note"> Price change per hour (USD)</figcaption>
+          <img style="box-shadow:none;position:relative;right:8%;max-width:115%;" data-ng-src="data:image/jpeg;base64,{{img}}"/>
+        </div>
+      </div>
+      <div class="card">
+        <div  class="item item-text-wrap">
+        <figcaption class="fig-crypto item-note"> Price change per day (USD)</figcaption>
+          <img style="box-shadow:none;position:relative;right:8%;max-width:115%;" data-ng-src="data:image/jpeg;base64,{{week}}"/>
+        </div>
+      </div>
+    </div>
+    </ion-content>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+.pane {
+	background: #333333;
+}
+
+.button-theme {
+	text-align:center;
+	background: #333333;
+	color:white;
+	width:30%;
+	margin:0 auto;
+	left:35%;
+}
+
+.title {
+	text-align:center;
+}
+
+.item:nth-child(2n+0) {
+	background-color: #ecf0f1;
+}
+
+.toggle input:checked + .track  {
+	background-color: #333333;
+    border-color: #333333;
+}
+
+.item-note {
+	position:absolute;
+	top:-60px;
+}
+
+
+.crypto-image {
+	position:relative;
+    float: left;
+	width:35px;
+	box-shadow: none
+	top:5px;
+	border-radius:30px;
+	margin-bottom:10px;
+
+}
+
+.fig-crypto {
+	position: absolute;
+	margin-top:2px;
+	bottom:5px;
+	left:23px;
+	font-size:10px;
+	color:grey;
+}
+
+.change {
+	position: absolute;
+	left:55px;
+	margin-top:10px;
+}
+
+.twentyfour{
+	font-size:10px;
+	color:grey;
+}
+
+.item-text-wrap {
+	overflow: hidden;
+}
+
+.price-main {
+	margin-left:20px;
+}
+
+.up {
+	margin-left:15px;
+}
+
+.down {
+	margin-left:15px;
+}
+
+.item-note-pic {
+	width:90px;
+	box-shadow:none;
+	position:absolute;
+	top:15px;
+	left:70%;
+
+}
+
+
+
+ion-spinner * {
+    stroke: #505264;
+  }
+
+.bar {
+	border: none;
+}
+
+
+.shadow {
+    box-shadow: 1px 1px 1px #333333;
+}
+
+.card {
+    box-shadow: 3px 3px 3px black;
+    border-radius:3px;
+}
